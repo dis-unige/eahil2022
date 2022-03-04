@@ -5,7 +5,7 @@ Repository to share code and data used for the study presented at the EAHIL 2022
 
 ## Title: Computational assistance in the analysis of cited references in biomedical literature: a case study from two institutions.
 
-## Autors:
+## Authors:
  * Teresa Lee, Knowledge Manager, International Agency for Research on Cancer (IARC/WHO) leet@iarc.fr  
  * Pablo Iriarte, IT Coordinator, Library of the University of Geneva Pablo.Iriarte@unige.ch 
  * Floriane Muller, Librarian (Medical Library), Library of the University of Geneva Floriane.Muller@unige.ch  
