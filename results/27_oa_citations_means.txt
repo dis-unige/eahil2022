@@ -1,0 +1,28 @@
+27. 27. Do article that are themselves OA cite more OA journals than articles that are not OA?
+----------------------------------------
+  
+UNIGE publications OA : 15793
+UNIGE publications OA with one or more citations OA : 14951
+UNIGE publications OA with one or more citations OA  % : 0.9466852402963338
+UNIGE publications OA with one or more citations not OA : 14866
+UNIGE publications OA with one or more citations not OA  % : 0.9413031089723295
+UNIGE publications not OA : 13462
+UNIGE publications not OA with one or more citations OA : 11317
+UNIGE publications not OA with one or more citations OA  % : 0.8406626058535136
+UNIGE publications not OA with one or more citations not OA : 12140
+UNIGE publications not OA with one or more citations not OA  % : 0.901797652651909
+UNIGE mean of citations OA per publication within publications OA : 0.5095568917652125
+UNIGE mean of citations OA per publication within publications not OA : 0.3410362988665907
+  
+IARC publications OA : 4147
+IARC publications OA with one or more citations OA : 4040
+IARC publications OA with one or more citations OA  % : 0.974198215577526
+IARC publications OA with one or more citations not OA : 3978
+IARC publications OA with one or more citations not OA  % : 0.9592476489028213
+IARC publications not OA : 2314
+IARC publications not OA with one or more citations OA : 1997
+IARC publications not OA with one or more citations OA  % : 0.8630077787381158
+IARC publications not OA with one or more citations not OA : 2025
+IARC publications not OA with one or more citations not OA  % : 0.8751080380293863
+IARC mean of citations OA per publication within publications OA : 0.5709824650293215
+IARC mean of citations OA per publication within publications not OA : 0.4389496988305206

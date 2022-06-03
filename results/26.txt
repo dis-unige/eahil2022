@@ -1,0 +1,56 @@
+26. Self citation?
+----------------------------------------
+
+PUBLICATIONS:
+
+UNIGE publications : 36370
+UNIGE publications with DOIs : 29376
+UNIGE publications with DOIs cited by UNIGE during the corpus years : 12353
+UNIGE publications with DOIs cited by UNIGE during the corpus years  % : 0.42051334422657954
+  
+IARC publications : 7268
+IARC publications with DOIs : 6483
+IARC publications with DOIs cited by IARC during the corpus years : 3516
+IARC publications with DOIs cited by IARC during the corpus years  % : 0.5423415085608515
+  
+CITATIONS:
+
+UNIGE citations : 1260981
+UNIGE citations with DOIs : 999588
+UNIGE citations with DOIs published after 2000 : 713687
+UNIGE citations with DOIs published after 2000 that are also UNIGE publication : 44982
+UNIGE citations with DOIs published after 2000 that are also UNIGE publication  % : 0.06302762975926421
+  
+IARC citations : 275622
+IARC citations with DOIs : 201591
+IARC citations with DOIs published after 2000 : 146188
+IARC citations with DOIs published after 2000 that are also IARC publication : 21895
+IARC citations with DOIs published after 2000 that are also IARC publication  % : 0.14977289517607464
+26. Self citation?
+----------------------------------------
+
+PUBLICATIONS:
+
+UNIGE publications : 36370
+UNIGE publications with DOIs : 29376
+UNIGE publications with DOIs cited by UNIGE during the corpus years : 12353
+UNIGE publications with DOIs cited by UNIGE during the corpus years  % : 0.42051334422657954
+  
+IARC publications : 7268
+IARC publications with DOIs : 6483
+IARC publications with DOIs cited by IARC during the corpus years : 3516
+IARC publications with DOIs cited by IARC during the corpus years  % : 0.5423415085608515
+  
+CITATIONS:
+
+UNIGE citations : 1260981
+UNIGE citations with DOIs : 999588
+UNIGE citations with DOIs published after 2000 : 713687
+UNIGE citations with DOIs published after 2000 that are also UNIGE publication : 44982
+UNIGE citations with DOIs published after 2000 that are also UNIGE publication  % : 0.06302762975926421
+  
+IARC citations : 275622
+IARC citations with DOIs : 201591
+IARC citations with DOIs published after 2000 : 146188
+IARC citations with DOIs published after 2000 that are also IARC publication : 21895
+IARC citations with DOIs published after 2000 that are also IARC publication  % : 0.14977289517607464

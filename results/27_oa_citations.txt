@@ -1,0 +1,19 @@
+27. Within the cited articles, what proportion are OA?
+----------------------------------------
+
+  
+UNIGE citations with DOIs : 999588
+UNIGE citations with DOIs that are OA : 455661
+UNIGE citations with DOIs that are OA  % : 0.45584880970960034
+UNIGE citations with DOIs that are not OA : 531709
+UNIGE citations with DOIs that are not OA  % : 0.5319281543996126
+UNIGE citations with DOIs but OA unknown : 12218
+UNIGE citations with DOIs but OA unknown % : 0.012223035890787005
+  
+IARC citations with DOIs : 201591
+IARC citations with DOIs that are OA : 103969
+IARC citations with DOIs that are OA  % : 0.5157422702402389
+IARC citations with DOIs that are not OA : 91420
+IARC citations with DOIs that are not OA  % : 0.4534924674216607
+IARC citations with DOIs but OA unknown : 6202
+IARC citations with DOIs but OA unknown % : 0.03076526233810041

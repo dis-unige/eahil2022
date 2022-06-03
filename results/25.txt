@@ -1,0 +1,66 @@
+25. Within the cited articles, what proportion exist in digital form (or at least have a DOI)
+----------------------------------------
+
+PUBLICATIONS:
+
+UNIGE publications : 36370
+UNIGE publications with DOIs  : 29376
+UNIGE publications with DOIs  % : 0.8076986527357712
+  
+IARC publications : 7268
+IARC publications with DOIs  : 6483
+IARC publications with DOIs  % : 0.8919922949917446
+  
+CITATIONS:
+
+UNIGE citations : 1260981
+UNIGE citations with DOIS : 999588
+UNIGE citations with DOIS % : 0.7927066307898374
+  
+IARC citations : 275622
+IARC citations with DOIS : 201591
+IARC citations with DOIS % : 0.7314038792258963
+25. Within the cited articles, what proportion exist in digital form (or at least have a DOI)
+----------------------------------------
+
+PUBLICATIONS:
+
+UNIGE publications : 36370
+UNIGE publications with DOIs  : 29376
+UNIGE publications with DOIs  % : 0.8076986527357712
+  
+IARC publications : 7268
+IARC publications with DOIs  : 6483
+IARC publications with DOIs  % : 0.8919922949917446
+  
+CITATIONS:
+
+UNIGE citations : 1260981
+UNIGE citations with DOIS : 999588
+UNIGE citations with DOIS % : 0.7927066307898374
+  
+IARC citations : 275622
+IARC citations with DOIS : 201591
+IARC citations with DOIS % : 0.7314038792258963
+25. Within the cited articles, what proportion exist in digital form (or at least have a DOI)
+----------------------------------------
+
+PUBLICATIONS:
+
+UNIGE publications : 36370
+UNIGE publications with DOIs  : 29376
+UNIGE publications with DOIs  % : 0.8076986527357712
+  
+IARC publications : 7268
+IARC publications with DOIs  : 6483
+IARC publications with DOIs  % : 0.8919922949917446
+  
+CITATIONS:
+
+UNIGE citations : 1260981
+UNIGE citations with DOIS : 999588
+UNIGE citations with DOIS % : 0.7927066307898374
+  
+IARC citations : 275622
+IARC citations with DOIS : 201591
+IARC citations with DOIS % : 0.7314038792258963

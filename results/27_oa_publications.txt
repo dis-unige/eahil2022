@@ -1,0 +1,19 @@
+27. Within the publications, what proportion are OA?
+----------------------------------------
+
+  
+UNIGE publications with DOIs : 29376
+UNIGE publications with DOIs that are OA : 15793
+UNIGE publications with DOIs that are OA  % : 0.5376157407407407
+UNIGE publications with DOIs that are not OA : 13462
+UNIGE publications with DOIs that are not OA  % : 0.45826525054466233
+UNIGE publications with DOIs but OA unknown : 121
+UNIGE publications with DOIs but OA unknown % : 0.00411900871459695
+  
+IARC publications with DOIs : 6483
+IARC publications with DOIs that are OA : 4147
+IARC publications with DOIs that are OA  % : 0.639672990899275
+IARC publications with DOIs that are not OA : 2314
+IARC publications with DOIs that are not OA  % : 0.35693351843282434
+IARC publications with DOIs but OA unknown : 22
+IARC publications with DOIs but OA unknown % : 0.0033934906679006635
