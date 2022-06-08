@@ -13,7 +13,7 @@ Repository to share code and data used for the study presented at the EAHIL 2022
 
 ## Introduction 
 
-At Institution A, a building move in 2022 requires a 40% reduction of its physical collection and a weeding strategy for the library’s print journals. From this scenario a question emerges: how old, on average, is the literature cited by in-house scientists in their own publications? According to Kaplan et al. 1 recent materials are accessed more frequently than older ones, with a significant drop for anything older than 15 years. In this project, we empirically test this assertion using computational assistance. Institution A’s librarian teamed up with a doctoral student in bioinformatics to parse citations retrieved from Web of Science based on an OG (enhanced organization) field search. University of B collaborators joined the experimental effort to test not only Kaplan et al.’s rule1, but to interrogate the dataset in ways that may shed light on historic citation trends, open-access and the electronic availability of research literature, the lasting prominence of super-cited references, and more. 
+At Institution A, a building move in 2022 requires a 40% reduction of its physical collection and a weeding strategy for the library’s print journals. From this scenario a question emerges: how old, on average, is the literature cited by in-house scientists in their own publications? According to Kaplan et al.  recent materials are accessed more frequently than older ones, with a significant drop for anything older than 15 years. In this project, we empirically test this assertion using computational assistance. Institution A’s librarian teamed up with a doctoral student in bioinformatics to parse citations retrieved from Web of Science based on an OG (enhanced organization) field search. University of B collaborators joined the experimental effort to test not only Kaplan et al.’s rule1, but to interrogate the dataset in ways that may shed light on historic citation trends, open-access and the electronic availability of research literature, the lasting prominence of super-cited references, and more. 
 
 ## Aim  
 
@@ -23,7 +23,7 @@ At Institution A, a building move in 2022 requires a 40% reduction of its physic
 
 ## Methods 
 
-Sets of records based on OG (enhanced organization) field searches for the University of B and for Institution A will be retrieved and parsed using Python2 or R3. A methodology for cleaning up the parsed set of records will be determined, implemented, and reported. Parsed and cleaned data from this initial process will be correlated with data from other sources of information (for e.g., CrossRef) to find answers to questions that go beyond what analysing Web of Science records alone can provide.  
+Sets of records based on OG (enhanced organization) field searches for the University of B and for Institution A will be retrieved and parsed using Python or R. A methodology for cleaning up the parsed set of records will be determined, implemented, and reported. Parsed and cleaned data from this initial process will be correlated with data from other sources of information (for e.g., CrossRef) to find answers to questions that go beyond what analysing Web of Science records alone can provide.  
 
 ## Results 
 
