@@ -76,7 +76,7 @@ colors_IARC = dict(color=colors[0])
 colors_UNIGE = dict(color=colors[1])
 
 # Set plot title
-ax.set_title('Citations age distribution during the last 50 years')
+ax.set_title('Citation age distribution')
 ax.boxplot(data["IARC"], positions=[1], labels = [list(data.keys())[0]],
            boxprops=colors_IARC, 
            medianprops=colors_IARC, 
@@ -91,7 +91,9 @@ ax.boxplot(data["UNIGE"], positions=[2], labels = [list(data.keys())[1]],
            capprops=colors_UNIGE, 
            flierprops=dict(markeredgecolor=colors[1]))
 plt.ylabel("Age")
-plt.savefig(folder_IARC + '13 - Citations age distribution during the last 50 years.png', dpi = 150)
+left, right = plt.xlim()
+plt.hlines(y=[11], xmin=left, xmax=right, color='red', linestyles="dashed")
+# plt.savefig(folder_IARC + '13 - Citations age distribution during the last 50 years.png', dpi = 150)
 plt.show()
 plt.close('all')
 
@@ -124,15 +126,26 @@ df2 = read_big_csv(file_UNIGE)
 df1_filter = df1[df1["Years_difference"] <= 50]
 df2_filter = df2[df2["Years_difference"] <= 50]
 
-sns.set(style="white")
-fig = sns.kdeplot(df1_filter['Years_difference'], shade=False, color=IARC_color)
-fig = sns.kdeplot(df2_filter['Years_difference'], shade=False, color=UNIGE_color)
-fig.legend(labels=['IARC','UNIGE'])
-fig.set_title("Citatons age during the last 50 years")
-fig.vlines(x=[15], ymin=0, ymax=0.105, color='red')
 
+plt.hist([df1_filter['Years_difference'], df2_filter['Years_difference']], 
+         50, 
+         density=True, 
+         histtype='bar', 
+         color=[IARC_color, UNIGE_color], 
+         label=["IARC", "UNIGE"])
+
+# sns.set(style="white")
+# fig = sns.kdeplot(df1_filter['Years_difference'], shade=False, color=IARC_color)
+# fig = sns.kdeplot(df2_filter['Years_difference'], shade=False, color=UNIGE_color)
+plt.legend(labels=['IARC','UNIGE'])
+plt.title("Citation age")
+plt.vlines(x=[15], ymin=0, ymax=0.108, color='red', linestyles="dashed")
 plt.xlabel("Age")
-plt.savefig(folder_IARC + '13 - Citatons age during the last 50 years.png', dpi = 150)
+plt.ylabel("Percent")
+
+plt.yticks(plt.yticks()[0], ['{:,.0%}'.format(x) for x in plt.yticks()[0]])
+
+plt.savefig(folder_IARC + '13 - Citaton age during the last 50 years.png', dpi = 150)
 plt.show()
 plt.close("all")
 
@@ -264,8 +277,9 @@ rects1 = ax.bar(x - width/2, IARC_means, width, label='IARC', color=IARC_color)
 rects2 = ax.bar(x + width/2, UNIGE_means, width, label='UNIGE', color=UNIGE_color)
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
-ax.set_ylabel('Age')
-ax.set_title('Citation average age during the las 20 years')
+ax.set_ylabel('Mean age of citations')
+ax.set_xlabel('Publication year')
+# ax.set_title('Citation average age')
 ax.set_xticks(x, labels, rotation=70)
 ax.legend(fontsize = 7)
 
@@ -306,7 +320,8 @@ rects2 = ax.bar(x + width/2, UNIGE_means, width, label='UNIGE', color=UNIGE_colo
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_ylabel('Ratio C/P')
-ax.set_title('Ratio of citation by publication during the las 20 years')
+ax.set_xlabel('Publication year')
+# ax.set_title('Ratio of citation by publication')
 ax.set_xticks(x, labels, rotation=70)
 ax.legend(fontsize = 6)
 

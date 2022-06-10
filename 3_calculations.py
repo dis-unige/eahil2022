@@ -30,6 +30,7 @@ def calculations_WoS(file_name, folder, year1, year2):
     
     # change column names 
     df_original.columns = df_original.columns.str.replace(' ','_')
+    # return(df_original)
     
     ##############################################################################################################
     
@@ -38,7 +39,7 @@ def calculations_WoS(file_name, folder, year1, year2):
     df_shape1 = df_original.shape[0]
     report_lines.append("CALCULATIONS REPORT")
     report_lines.append("")
-    report_lines.append("Number of publications retrieved from WoS:                                           " + str(len(list(set(list(df_original["Accession_Number"]))))))
+    report_lines.append("Number of publications retrieved from WoS:                                           " + str(len(list(set(list(df_original["ID"]))))))
     report_lines.append("Number of citations retrieved from WoS:                                              " + str(df_shape1))
     report_lines.append("")
     
@@ -83,9 +84,9 @@ def calculations_WoS(file_name, folder, year1, year2):
     df_deleted.to_csv(folder + "//" + file_name.replace(".csv","") + "_deleted.csv", index=False, sep=";", chunksize=10000)
     report_lines.append("")
     report_lines.append("Final number of entries                                                              " + str(df.shape[0]))
-    report_lines.append("Final number of publications                                                         " + str(len(list(set(list(df["Accession_Number"]))))))
+    report_lines.append("Final number of publications                                                         " + str(len(list(set(list(df["ID"]))))))
     report_lines.append("Number of removed entries                                                            " + str(df_original.shape[0] - df.shape[0]))
-    report_lines.append("Number of removed publications                                                       " + str(len(list(set(list(df_original["Accession_Number"])))) - len(list(set(list(df["Accession_Number"]))))))
+    report_lines.append("Number of removed publications                                                       " + str(len(list(set(list(df_original["ID"])))) - len(list(set(list(df["ID"]))))))
     report_lines.append("")
     
     control = df_deleted.shape[0] == ((df_shape1 - df_shape2) + (df_shape2 - df_shape3) + (df_shape3 - df_shape4) + (df_shape4 - df_shape5))
@@ -101,7 +102,7 @@ def calculations_WoS(file_name, folder, year1, year2):
     # Save df after filters
     # df.to_excel(folder + "df_filtered.xlsx", index=False)
     df.to_csv(folder + "df_filtered.csv", index=False, sep=",", chunksize=10000)
-    return(df)
+    # return(df)
 
     ##############################################################################################################
     
@@ -321,53 +322,53 @@ def calculations_WoS(file_name, folder, year1, year2):
     
     ##############################################################################################################
     
-    # 21 - Which journal has the largest difference between lowest Age Difference and highest Age Difference
-    print("21 ############################################################################")
-    print("")
-    ### cited ref 
-    journal_differences_citedref_df = df.groupby('Journal_of_cited_article').agg({'Years_difference': ['count', 'mean', 'median', 'min', 'max', 'std', lambda x: pd.Series.mode(x) if len(pd.Series.mode(x)) <= 1 else "NA"]})
-    journal_differences_citedref_df.columns = ['Citations', 'YD_mean', 'YD_median', 'YD_min', 'YD_max', 'YD_std', 'YD_mode']
-    ### New
-    journal_differences_citedref_df.insert(0, "Publications", 0)
+    # # 21 - Which journal has the largest difference between lowest Age Difference and highest Age Difference
+    # print("21 ############################################################################")
+    # print("")
+    # ### cited ref 
+    # journal_differences_citedref_df = df.groupby('Journal_of_cited_article').agg({'Years_difference': ['count', 'mean', 'median', 'min', 'max', 'std', lambda x: pd.Series.mode(x) if len(pd.Series.mode(x)) <= 1 else "NA"]})
+    # journal_differences_citedref_df.columns = ['Citations', 'YD_mean', 'YD_median', 'YD_min', 'YD_max', 'YD_std', 'YD_mode']
+    # ### New
+    # journal_differences_citedref_df.insert(0, "Publications", 0)
     
-    list_of_cited_journals = list(journal_differences_citedref_df.index)
-    for cited_journal in list_of_cited_journals:
-        sub_df = df[df["Journal_of_cited_article"] == cited_journal]
-        number_WOS = len(list(set(list(sub_df["Accession_Number"]))))
-        journal_differences_citedref_df.loc[cited_journal, 'Publications'] = number_WOS
+    # list_of_cited_journals = list(journal_differences_citedref_df.index)
+    # for cited_journal in list_of_cited_journals:
+    #     sub_df = df[df["Journal_of_cited_article"] == cited_journal]
+    #     number_WOS = len(list(set(list(sub_df["Accession_Number"]))))
+    #     journal_differences_citedref_df.loc[cited_journal, 'Publications'] = number_WOS
         
-    journal_differences_citedref_df.insert(2, "Ratio C/P", 0)
-    journal_differences_citedref_df["Ratio C/P"] = (round(journal_differences_citedref_df["Citations"] / journal_differences_citedref_df["Publications"], 2))
-    ### 
+    # journal_differences_citedref_df.insert(2, "Ratio C/P", 0)
+    # journal_differences_citedref_df["Ratio C/P"] = (round(journal_differences_citedref_df["Citations"] / journal_differences_citedref_df["Publications"], 2))
+    # ### 
 
-    # Fix problem mode single citations
-    journal_differences_citedref_df.loc[journal_differences_citedref_df['Citations'] == "1", 'YD_mode'] = 'NA'
+    # # Fix problem mode single citations
+    # journal_differences_citedref_df.loc[journal_differences_citedref_df['Citations'] == "1", 'YD_mode'] = 'NA'
     
-    # Fix problem mode more than one equal value
-    def clean_mode(x):
-        if str(x).find("[") != -1:
-            return("NA")
-        else:
-            return(x)
-    journal_differences_citedref_df['YD_mode'] = journal_differences_citedref_df['YD_mode'].apply(clean_mode)
+    # # Fix problem mode more than one equal value
+    # def clean_mode(x):
+    #     if str(x).find("[") != -1:
+    #         return("NA")
+    #     else:
+    #         return(x)
+    # journal_differences_citedref_df['YD_mode'] = journal_differences_citedref_df['YD_mode'].apply(clean_mode)
  
-    ### Save file
-    journal_differences_citedref_df.to_excel(folder + "21.xlsx", index=True)
-    print("excel file saved correctly")
-    print("")
+    # ### Save file
+    # journal_differences_citedref_df.to_excel(folder + "21.xlsx", index=True)
+    # print("excel file saved correctly")
+    # print("")
     
-    ##############################################################################################################
+    # ##############################################################################################################
     
-    # 22 - What is the title range of journals published in by an UNIGE or IARC vs. the title range of cited items? 
-    # For instance IARC published in XXX titles for a certain period. The corresponding cited/bibliography items 
-    # encompassed XXX number of titles.
-    print("22 ############################################################################")
-    print("")
-    unique_journals_original = len(list(set(list(df["ISSN"]))))
-    unique_journals_cited = len(list(set(list(df["Journal_of_cited_article"]))))
-    print("Number of unique journals in primary article: ", unique_journals_original)
-    print("Number of unique journals in cited article:   ", unique_journals_cited)
-    del(unique_journals_original); del(unique_journals_cited)
+    # # 22 - What is the title range of journals published in by an UNIGE or IARC vs. the title range of cited items? 
+    # # For instance IARC published in XXX titles for a certain period. The corresponding cited/bibliography items 
+    # # encompassed XXX number of titles.
+    # print("22 ############################################################################")
+    # print("")
+    # unique_journals_original = len(list(set(list(df["ISSN"]))))
+    # unique_journals_cited = len(list(set(list(df["Journal_of_cited_article"]))))
+    # print("Number of unique journals in primary article: ", unique_journals_original)
+    # print("Number of unique journals in cited article:   ", unique_journals_cited)
+    # del(unique_journals_original); del(unique_journals_cited)
     
     # 23 - New suggestion, mean delay between publication date of cited ref and citing article, per journal
 
@@ -377,12 +378,12 @@ def calculations_WoS(file_name, folder, year1, year2):
 ### IARC
 folder_IARC = "C://Users//ciercor//OneDrive - IARC//EAHIL 2022 proposal//IARC data and calculations 2001_2020//"
 file_name_IARC = "IARC_WoS.csv"
-df = calculations_WoS(file_name_IARC, folder_IARC, 2000, 2020)
+df_IARC = calculations_WoS(file_name_IARC, folder_IARC, 2001, 2020)
 del(folder_IARC); del(file_name_IARC)
 ### UNIGE
 folder_UNIGE = "C://Users//ciercor//OneDrive - IARC//EAHIL 2022 proposal//UNIGE data and calculations 2001_2020//"
 file_name_UNIGE = "UNIGE_WoS.csv"
-df = calculations_WoS(file_name_UNIGE, folder_UNIGE, 2000, 2020)
+df_UNIGE = calculations_WoS(file_name_UNIGE, folder_UNIGE, 2001, 2020)
 del(folder_UNIGE); del(file_name_UNIGE)
 
 ##################################################################################################################

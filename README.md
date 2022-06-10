@@ -54,11 +54,13 @@ This means looking at the data with a few different perspectives.
 
 ## Results 
 
-TBA 
-
-## Conclusion 
-
-TBA 
+- The 15-year rule holds
+- Authors are citing more papers & older papers 
+- Articles have DOIs more often 
+- Citations have DOIs more often too (but still less often than publications)
+- Open Access is increasing
+- OA publications tend to cite more OA papers
+- Institutions cite themselves often, but maybe even more often if they are specialized in a narrow field of research
 
 ## References 
 
