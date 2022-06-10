@@ -1,7 +1,7 @@
 
 # EAHIL 2022
 
-Repository to share code and data used for the study presented at the EAHIL 2022 conference
+Repository to share code and data used for the study presented at the EAHIL 2022 conference (https://eahil2022.nl)
 
 ## Title: Computational assistance in the analysis of cited references in biomedical literature: a case study from two institutions.
 
